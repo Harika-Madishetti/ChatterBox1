@@ -12,7 +12,13 @@ export default class App extends Component {
                     {key: 'Harish'},
                     {key: 'Hema'},
                     {key: 'Katta'},
-                    {key: 'Lokesh'}
+                    {key: 'Lokesh'},
+                    {key: 'Ranga'},
+                    {key: 'Harika'},
+                    {key: 'Manoj'},
+                    {key: 'Harish'},
+                    {key: 'Hema'},
+                    {key: 'Katta'},
                 ],
             };
         }
@@ -37,7 +43,9 @@ export default class App extends Component {
                   <FlatList
                       data={this.state.FlatListItem}
                       renderItem={({ item }) => (
+                          <View style={styles.separator}>
                           <Text style={styles.item}> {item.key} </Text>
+                          </View>
                       )}
                       ListEmptyComponent={this.ListEmpty}/>
               </View>
@@ -49,13 +57,20 @@ const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
         backgroundColor: '#F5FCFF',
-        height: 24
+        height: 24,
     },
     item: {
         padding: 10,
         fontSize: 18,
-        height: 44,
+        height: 50,
         flexDirection: "row",
+    },
+    separator: {
+        justifyContent: "center",
+        padding: 10,
+        height: 50,
+        borderBottomColor: "rgba(92,94,94,0.5)",
+        borderBottomWidth: 0.25
     },
     headerContainer: {
         flex: 1,
