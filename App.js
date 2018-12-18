@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Text, FlatList , View} from 'react-native';
 import styles from "./styleSheet";
+import Header from "./Header";
 
 export default class App extends Component {
     constructor(props) {
@@ -26,13 +27,7 @@ export default class App extends Component {
   render() {
       return (
           <View style={styles.mainContainer}>
-              <View style={styles.headerContainer}>
-                  <View style={styles.leftHeaderContainer}>
-                      <Text style={styles.logoText}>P2PAPP</Text>
-                  </View>
-                  <View style={styles.rightHeaderContainer}>
-                  </View>
-              </View>
+              <Header/>
               <View style={styles.contentContainer}>
                   <FlatList
                       data={this.state.FlatListItem}
