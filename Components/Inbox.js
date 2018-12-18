@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, FlatList , View} from 'react-native';
+import { Text, FlatList , TouchableOpacity} from 'react-native';
 import styles from "../Stylesheet/styleSheet";
 
 export default class Inbox extends Component{
@@ -20,10 +20,10 @@ export default class Inbox extends Component{
         return(
             <FlatList
                 data={this.state.ChatListContacts}
-                renderItem={({ item }) => (
-                    <View style={styles.separator}>
+                renderItem={({ item }) =>(
+                    <TouchableOpacity style={styles.separator}>
                         <Text style={styles.item}> {item.name} </Text>
-                    </View>
+                    </TouchableOpacity>
                 )}
             />
 
